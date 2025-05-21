@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-surface-50 text-surface-800 dark:bg-surface-900 dark:text-surface-100 min-h-screen font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .quiz-card {
+    @apply bg-white dark:bg-surface-800 rounded-2xl shadow-card p-6 transition-all duration-300 hover:shadow-soft;
+  }
+  
+  .question-option {
+    @apply relative p-4 rounded-xl bg-surface-100 dark:bg-surface-700 cursor-pointer 
+           transition-all duration-200 border-2 border-transparent 
+           hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10
+           flex items-center gap-3 text-left;
+  }
+  
+  .option-selected {
+    @apply border-primary bg-primary/10 dark:bg-primary/20;
+  }
+  
+  .option-correct {
+    @apply border-green-500 bg-green-100 dark:bg-green-900/20;
+  }
+  
+  .option-incorrect {
+    @apply border-red-500 bg-red-100 dark:bg-red-900/20;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-xl
+           transition-all duration-200 shadow-sm hover:shadow-md
+           active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-white font-medium py-3 px-6 rounded-xl
+           transition-all duration-200 shadow-sm hover:shadow-md
+           active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary bg-transparent hover:bg-primary/5
+           font-medium py-3 px-6 rounded-xl transition-all duration-200
+           active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed;
+  }
+  
+  .category-card {
+    @apply relative overflow-hidden rounded-2xl shadow-card transition-all duration-300
+           hover:shadow-lg group cursor-pointer border-2 border-transparent
+           hover:border-primary dark:bg-surface-800 bg-white;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

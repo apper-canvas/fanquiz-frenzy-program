@@ -39,7 +39,7 @@ const Home = () => {
       name: 'Harry Potter',
       color: 'harrypotter',
       icon: MagicWandIcon,
-      description: 'Enter the wizarding world and see if you're as knowledgeable as Hermione Granger!'
+      description: 'Enter the wizarding world and see if you're as knowledgeable as Hermione Granger!',
     }
   ];
   

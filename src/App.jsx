@@ -57,13 +57,12 @@ function App() {
       </header>
       
       <main className="flex-grow">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
+        <AnimatePresence mode="wait" initial={false}>
+          <Routes location={location} key={location.key}>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
-      </main>
       
       <footer className="bg-white dark:bg-surface-800 py-4 mt-8">
         <div className="container mx-auto px-4 text-center text-surface-500 dark:text-surface-400 text-sm">
@@ -83,6 +82,7 @@ function App() {
         pauseOnHover
         theme={darkMode ? "dark" : "light"}
       />
+      </main>
     </div>
   );
 }
